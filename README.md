@@ -1,4 +1,4 @@
-# Appium Instance Ready for Window 10
+# Prepare Appium Instance for Window 10
 To Start Automation with Appium, we have to follow couple of steps.
 First we have to make our system ready and then we can start our journey with appium.
 
