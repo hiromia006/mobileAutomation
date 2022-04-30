@@ -1,0 +1,5 @@
+
+# Webdriver local install
+/.gradle/
+/.idea/
+/build/
