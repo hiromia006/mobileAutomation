@@ -5,11 +5,11 @@ import com.appium.test.BaseTest;
 public class BaseCalculatorTest extends BaseTest {
     @Override
     protected String getAppPackage() {
-        return "com.sec.android.app.popupcalculato";
+        return "com.google.android.calculator";
     }
 
     @Override
     protected String getAppActivity() {
-        return "com.sec.android.app.popupcalculator.Calculator";
+        return "com.android.calculator2.Calculator";
     }
 }
