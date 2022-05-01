@@ -76,13 +76,11 @@ public class CalculatorTest extends BaseCalculatorTest {
 //        String secondInput = webElementInput.getText().trim().split("\\?")[1].trim();
         System.out.println("Input2 : " + webElementInput.getText().trim());
 
-        int sum = Integer.parseInt(firstInput) - 7;
-
         wait.until(elementToBeClickable(driver.findElement(By.id("com.google.android.calculator:id/eq")))).click();
         String result = driver.findElement(By.id("com.google.android.calculator:id/result_final")).getText().trim();
         System.out.println("Sum : " + result);
 
-        Assert.assertEquals(sum, Integer.parseInt(result));
+        Assert.assertEquals((Integer.parseInt(firstInput) - 7), Integer.parseInt(result));
     }
 
 
