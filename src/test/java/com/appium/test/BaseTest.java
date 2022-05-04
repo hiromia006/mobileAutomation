@@ -1,6 +1,5 @@
 package com.appium.test;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.screenrecording.CanRecordScreen;
@@ -17,9 +16,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 
 public abstract class BaseTest extends BaseExtentReportsTest {
     protected AndroidDriver driver;
@@ -59,14 +56,12 @@ public abstract class BaseTest extends BaseExtentReportsTest {
         String base64String = ((CanRecordScreen) driver).stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
         String destinationPath = projectHomeDirectory + "/build/videos";
-        String videoName = new SimpleDateFormat("yyyy-MM-dd-HH mm-ss-SSS").format(new Date());
-
         File theDir = new File(destinationPath);
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
 
-        String filePath = destinationPath + "/" + videoName + ".mp4";
+        String filePath = destinationPath + "/" + driver.getDeviceTime().replace(":", "_").replace("+", " ") + ".mp4";
         System.out.println("filePath : " + filePath);
         Path path = Paths.get(filePath);
         try {
