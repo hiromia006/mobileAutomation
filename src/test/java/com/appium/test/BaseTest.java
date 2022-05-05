@@ -1,5 +1,6 @@
 package com.appium.test;
 
+import com.appium.test.util.GeneralUtil;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.screenrecording.CanRecordScreen;
@@ -37,7 +38,7 @@ public abstract class BaseTest extends BaseExtentReportsTest {
         desiredCapabilities.setCapability("appActivity", getAppActivity());
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME));
 
         //Start recording screen
         ((CanRecordScreen) driver).startRecordingScreen();
