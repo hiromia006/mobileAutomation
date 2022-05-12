@@ -52,4 +52,4 @@ First we have to make our system ready and then we can start our journey with ap
   - Select your capabilities  ![img.png](images/img.png)
   -  Start Appium Server GUI First ![img.png](images/img_1.png)
   -  Appium Inspector server ![img.png](images/img_2.png)
-  -- Appium Inspector will open ![img.png](images/img_3.png)
+  - Appium Inspector will open ![img.png](images/img_3.png)
