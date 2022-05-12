@@ -1,6 +1,6 @@
 # Prepare Appium Instance for Window 10
 To Start Automation with Appium, we have to follow couple of steps.
-First we have to make our system ready and then we can start our journey with appium.
+First we have to make your system ready then we can start our journey with appium.
 
 1. [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 2. [Download & Install IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
@@ -51,5 +51,6 @@ First we have to make our system ready and then we can start our journey with ap
         - Allow Unauthorized Certificates
   - Select your capabilities  ![img.png](images/img.png)
   -  Start Appium Server GUI First ![img.png](images/img_1.png)
-  -  Appium Inspector server ![img.png](images/img_2.png)
+  -  Appium Inspector server
+     ![img.png](images/img_2.png)
   - Appium Inspector will open ![img.png](images/img_3.png)
