@@ -38,10 +38,11 @@ public abstract class BaseTest extends BaseExtentReportsTest {
         desiredCapabilities.setCapability("appActivity", getAppActivity());
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+        wait = new WebDriverWait(driver, GeneralUtil.WAIT_TIME);
 
         //Start recording screen
-        ((CanRecordScreen) driver).startRecordingScreen();
+        driver.startRecordingScreen();
 
     }
 
@@ -54,7 +55,7 @@ public abstract class BaseTest extends BaseExtentReportsTest {
 
     private void stopRecording() {
         String projectHomeDirectory = System.getProperty("user.dir");
-        String base64String = ((CanRecordScreen) driver).stopRecordingScreen();
+        String base64String = driver.stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
         String destinationPath = projectHomeDirectory + "/build/videos";
         File theDir = new File(destinationPath);
