@@ -37,7 +37,7 @@ First we have to make your system ready then we can start our journey with appiu
 ## Appium Inspector to Identify Elements
 1. [Appium Inspector download & install](https://github.com/appium/appium-inspector/releases)
 2. **Configure Appium Desktop client &  Appium Inspector**
-  - Configure Appium Desktop
+  - Appium Desktop
      -  Go to Appium Server GUI -> Advanced
         -  Server address: localhost
         -  Port: 4723
