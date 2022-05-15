@@ -34,9 +34,13 @@ First we have to make your system ready then we can start our journey with appiu
 3. Start Writing Automation Code
 4. Run Test Cases
 
+### Related Resources
+* [Troubleshoot Activities Startup](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md)
+* [Appium API Documentation](https://appium.io/docs/en/about-appium/api/)
+
 ## Appium Inspector to Identify Elements
 1. [Appium Inspector download & install](https://github.com/appium/appium-inspector/releases)
-2. **Configure Appium Desktop client &  Appium Inspector**
+2. **Configure Appium Desktop client & Appium Inspector**
   - Appium Desktop
      -  Go to Appium Server GUI -> Advanced
         -  Server address: localhost
