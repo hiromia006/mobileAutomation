@@ -36,10 +36,6 @@ First we have to make your system ready then we can start our journey with appiu
 3. Start Writing Automation Code
 4. Run Test Cases
 
-### Related Resources
-* [Troubleshoot Activities Startup](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md)
-* [Appium API Documentation](https://appium.io/docs/en/about-appium/api/)
-
 ## Appium Inspector to Identify Elements
 1. [Appium Inspector download & install](https://github.com/appium/appium-inspector/releases)
 2. **Configure Appium Desktop client & Appium Inspector**
@@ -60,3 +56,11 @@ First we have to make your system ready then we can start our journey with appiu
   -  Appium Inspector server
      ![img.png](images/img_2.png)
   - Appium Inspector will open ![img.png](images/img_3.png)
+
+### Run Test Case
+* **Run Test Case** - Go to desired Java Class where has Test Case, Right click of mouse on Test Case >> click on Run
+* **Run XML File** - After create TestNG file, Right click of mouse on TestNG xml >> click on Run
+
+### Related Resources
+* [Troubleshoot Activities Startup](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md)
+* [Appium API Documentation](https://appium.io/docs/en/about-appium/api/)
