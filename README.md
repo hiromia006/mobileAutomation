@@ -67,7 +67,7 @@ First we have to make your system ready then we can start our journey with appiu
 * [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
 
 # Create automated scripts to test EMI Calculator mobile app
-[Download & install EMI Calculator mobile app your device](https://github.com/hiromia006/mobileAutomation/tree/main/src/test/java/com/appium)
+[Download & install EMI Calculator mobile app your device](https://github.com/hiromia006/mobileAutomation/blob/main/src/test/resources/emi-calculator.apk)
 
 ### Key functionalities, that have to be covered:
 
