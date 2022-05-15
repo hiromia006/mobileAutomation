@@ -2,6 +2,7 @@ package com.appium.test.calculator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,14 +19,14 @@ public class CalculatorTest extends BaseCalculatorTest {
         String firstInput = webElementInput.getText().trim();
         System.out.println("Input : " + firstInput);
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("op_add")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("op_add")))).click();
 
         WebElement webElement9 = driver.findElement(By.id("digit_9"));
         wait.until(elementToBeClickable(webElement9)).click();
         String secondInput = webElementInput.getText().trim().split("\\+")[1].trim();
         System.out.println("Input2 : " + secondInput);
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("eq")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("eq")))).click();
         String result = driver.findElement(By.id("result_final")).getText().trim();
         System.out.println("Sum : " + result);
 
@@ -43,7 +44,7 @@ public class CalculatorTest extends BaseCalculatorTest {
         String firstInput = webElementInput.getText().trim();
         System.out.println("Input : " + firstInput);
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("op_add")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("op_add")))).click();
 
         WebElement webElement9 = driver.findElement(By.id("digit_9"));
         wait.until(elementToBeClickable(webElement9)).click();
@@ -52,7 +53,7 @@ public class CalculatorTest extends BaseCalculatorTest {
         String secondInput = webElementInput.getText().trim().split("\\+")[1].trim();
         System.out.println("Input2 : " + secondInput);
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("eq")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("eq")))).click();
         String result = driver.findElement(By.id("result_final")).getText().trim();
         System.out.println("Sum : " + result);
 
@@ -69,14 +70,14 @@ public class CalculatorTest extends BaseCalculatorTest {
         String firstInput = webElementInput.getText().trim();
         System.out.println("Input : " + firstInput);
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("op_sub")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("op_sub")))).click();
 
         WebElement webElement9 = driver.findElement(By.id("digit_7"));
         wait.until(elementToBeClickable(webElement9)).click();
 //        String secondInput = webElementInput.getText().trim().split("\\?")[1].trim();
         System.out.println("Input2 : " + webElementInput.getText().trim());
 
-        wait.until(elementToBeClickable(driver.findElement(By.id("eq")))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("eq")))).click();
         String result = driver.findElement(By.id("result_final")).getText().trim();
         System.out.println("Sum : " + result);
 
