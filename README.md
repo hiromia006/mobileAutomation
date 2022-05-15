@@ -19,7 +19,7 @@ First we have to make your system ready then we can start our journey with appiu
     - Turn On the "USB Debugging" option from "Developer Options"
 12. Indentify appPackage & appActivityName
     Open the app in your device. and use the command - adb shell "dumpsys activity activities | grep mResumedActivity"
-13. * **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
+13. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
       TestNG XML' & install
       
 ##  Create Java(Gradle) Project in IntelliJ IDEA for Appium
