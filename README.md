@@ -3,7 +3,7 @@ To Start Automation with Appium, we have to follow couple of steps.
 First we have to make your system ready then we can start our journey with appium.
 
 1. [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
-2. [Download & Install IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+2. [Download & Install IntelliJ IDEA Community Version](https://www.jetbrains.com/idea/download/)
 3. [Download & Install android studio Android SDK thourgh Android Studio](https://developer.android.com/studio)
 4. [Download & Install LTS Node Js](https://nodejs.org/en/download/)
 5. [Download & Install Vysor](https://www.vysor.io/download/)
