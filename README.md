@@ -64,3 +64,4 @@ First we have to make your system ready then we can start our journey with appiu
 ### Related Resources
 * [Troubleshoot Activities Startup](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md)
 * [Appium API Documentation](https://appium.io/docs/en/about-appium/api/)
+* [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
