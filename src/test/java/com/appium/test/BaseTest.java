@@ -2,10 +2,13 @@ package com.appium.test;
 
 
 import com.appium.util.GeneralUtil;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.offset.PointOption;
 import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -34,11 +37,13 @@ public abstract class BaseTest extends BaseExtentReportsTest {
     public void setUp() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "samsung SM T225");
-        desiredCapabilities.setCapability("udid", "R8KR5001TLA");
+        desiredCapabilities.setCapability("udid", "R8KR5000D4B");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability("platformVersion", "11");
         desiredCapabilities.setCapability("appPackage", getAppPackage());
         desiredCapabilities.setCapability("appActivity", getAppActivity());
+        desiredCapabilities.setCapability("noReset", "true");
+        desiredCapabilities.setCapability("fullReset", "false");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
@@ -88,5 +93,22 @@ public abstract class BaseTest extends BaseExtentReportsTest {
             iteration = iteration + 1;
             hasWebElement = driver.findElements(locator).size() == 0;
         }
+    }
+
+
+    protected void scrollToMiddle() {
+        Dimension dimension = driver.manage().window().getSize();
+        System.out.println("X =: " + dimension.width + "  Y =: " + dimension.height);
+        System.out.println("X =: " + dimension.getWidth() + "  Y =: " + dimension.getHeight());
+        int startX = dimension.getWidth() / 2;
+        int endX = dimension.getWidth() / 2;
+
+        int startY = (int) (dimension.getHeight() * .50);
+        int endY = (int) (dimension.getHeight() * .10);
+        GeneralUtil.longWaitForDomStable();
+
+        new TouchAction(driver).press(PointOption.point(startX, startY)).waitAction().moveTo(PointOption.point(endX, endY)).release().perform();
+        GeneralUtil.longWaitForDomStable();
+
     }
 }
