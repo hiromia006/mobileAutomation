@@ -9,7 +9,7 @@ First we have to make your system ready then we can start our journey with appiu
 5. [Download & Install Vysor](https://www.vysor.io/download/)
 6. [Download & Install Appium Desktop Apps](https://github.com/appium/appium-desktop/releases/)
 7. Set environment variable(path) -  Set JAVA_HOME & ANDROID_HOME
-8. Check if node.js & npm are installed - node --version, npm --version
+8. Check if node.js, npm & Android SDK are installed - node --version, npm --version, adb --version
 9. Install appium with node.js - npm install -g appium
 10. Check if appium is installed - appium -v
 11. Plugin Device (turn on developer mode & USB debugging)    
