@@ -29,6 +29,17 @@ public class EmiCalculatorTest extends BaseEmiCalculatorTest {
                 .clickCalculateBtn();
     }
 
+    @Test
+    public void resetEmiShouldSucceed() {
+        emiCalculatorPage = emiCalculatorPage
+                .fillAmount(10000)
+                .fillInterest(8)
+                .fillYear(1)
+                .fillMonth(8)
+                .fillFee(2)
+                .resetCalculateBtn();
+    }
+
 
     @AfterClass
     public void dearDown() {

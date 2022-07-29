@@ -28,6 +28,9 @@ public class EmiCalculatorPage extends BaseEmiCalculatorTest {
     @AndroidFindBy(id = "btnCalculate")
     WebElement calculateBtn;
 
+    @AndroidFindBy(id = "btnReset")
+    WebElement btnReset;
+
     public EmiCalculatorPage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME)), this);
     }
@@ -68,4 +71,9 @@ public class EmiCalculatorPage extends BaseEmiCalculatorTest {
         return this;
     }
 
+    public EmiCalculatorPage resetCalculateBtn() {
+        btnReset.isDisplayed();
+        btnReset.click();
+        return this;
+    }
 }
