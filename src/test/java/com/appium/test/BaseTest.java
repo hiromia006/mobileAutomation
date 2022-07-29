@@ -11,8 +11,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,26 +24,29 @@ import java.time.Duration;
 import static com.appium.util.GeneralUtil.WAIT_LOADING_TIME;
 
 public abstract class BaseTest extends BaseExtentReportsTest {
-    protected AndroidDriver driver;
+    static protected AndroidDriver driver;
     protected WebDriverWait wait;
 
     protected abstract String getAppPackage();
 
     protected abstract String getAppActivity();
 
-    @BeforeClass
-    public void setUp() throws MalformedURLException {
-        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "samsung SM T225");
-        desiredCapabilities.setCapability("udid", "R8KR5000D4B");
-        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        desiredCapabilities.setCapability("platformVersion", "11");
-        desiredCapabilities.setCapability("appPackage", getAppPackage());
-        desiredCapabilities.setCapability("appActivity", getAppActivity());
-        desiredCapabilities.setCapability("noReset", "true");
-        desiredCapabilities.setCapability("fullReset", "false");
+    public void initialization() {
+        try {
+            DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "samsung SM T225");
+            desiredCapabilities.setCapability("udid", "R8KR5000D4B");
+            desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+            desiredCapabilities.setCapability("platformVersion", "11");
+            desiredCapabilities.setCapability("appPackage", getAppPackage());
+            desiredCapabilities.setCapability("appActivity", getAppActivity());
+            desiredCapabilities.setCapability("noReset", "true");
+            desiredCapabilities.setCapability("fullReset", "false");
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         wait = new WebDriverWait(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME));
 
@@ -55,13 +56,12 @@ public abstract class BaseTest extends BaseExtentReportsTest {
     }
 
 
-    @AfterClass
     public void tearDown() {
         stopRecording();
         driver.quit();
     }
 
-    private void stopRecording() {
+    protected void stopRecording() {
         String projectHomeDirectory = System.getProperty("user.dir");
         String base64String = driver.stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
@@ -105,10 +105,21 @@ public abstract class BaseTest extends BaseExtentReportsTest {
 
         int startY = (int) (dimension.getHeight() * .50);
         int endY = (int) (dimension.getHeight() * .10);
-        GeneralUtil.longWaitForDomStable();
-
         new TouchAction(driver).press(PointOption.point(startX, startY)).waitAction().moveTo(PointOption.point(endX, endY)).release().perform();
-        GeneralUtil.longWaitForDomStable();
+        GeneralUtil.waitForDomStable();
 
+    }
+
+    protected void scrollToBottom() {
+        Dimension dim = driver.manage().window().getSize();
+        int height = dim.getHeight();
+        int width = dim.getWidth();
+        int x = width / 2;
+        int top_y = (int) (height * 0.80);
+        int bottom_y = (int) (height * 0.20);
+        System.out.println("coordinates :" + x + "  " + top_y + " " + bottom_y);
+        TouchAction ts = new TouchAction(driver);
+        ts.press(PointOption.point(x, top_y)).moveTo(PointOption.point(x, bottom_y)).release().perform();
+        GeneralUtil.waitForDomStable();
     }
 }
