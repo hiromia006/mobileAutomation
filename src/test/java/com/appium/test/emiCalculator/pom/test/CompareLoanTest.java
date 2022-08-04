@@ -31,15 +31,14 @@ public class CompareLoanTest extends BaseTestAppium {
     @Test
     public void resetLoanShouldSucceed() {
         compareLoanPage = compareLoanPage
-                .fillLoanAmount1(10000)
-                .fillInterest1(8)
-                .fillPeriod1(12)
-                .fillLoanAmount2(15000)
+                .fillLoanAmount1(1000)
+                .fillInterest1(9)
+                .fillPeriod1(15)
+                .fillLoanAmount2(3000)
                 .fillInterest2(7)
-                .fillPeriod2(3)
+                .fillPeriod2(2)
                 .clickRestBtn();
     }
-
 
     @AfterClass
     public void dearDown() {
