@@ -1,7 +1,7 @@
 package com.appium.test.emiCalculator.pom.pages;
 
-import com.appium.test.emiCalculator.BaseEmiCalculatorTest;
-import com.appium.util.GeneralUtil;
+import com.appium.test.emiCalculator.pom.BaseTestAppium;
+import com.appium.test.emiCalculator.pom.util.AppiumUtil;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -9,71 +9,100 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.time.Duration;
 
-public class EmiCalculatorPage extends BaseEmiCalculatorTest {
+public class EmiCalculatorPage extends BaseTestAppium {
     @AndroidFindBy(id = "etLoanAmount")
-    WebElement amountEL;
+    WebElement etLoanAmount;
 
     @AndroidFindBy(id = "etInterest")
-    WebElement interestEl;
+    WebElement etInterest;
 
     @AndroidFindBy(id = "etYears")
-    WebElement yearEl;
+    WebElement etYears;
 
     @AndroidFindBy(id = "etMonths")
-    WebElement monthEl;
+    WebElement etMonths;
 
     @AndroidFindBy(id = "etFee")
-    WebElement feeEl;
+    WebElement etFee;
 
     @AndroidFindBy(id = "btnCalculate")
-    WebElement calculateBtn;
+    WebElement btnCalculate;
 
     @AndroidFindBy(id = "btnReset")
     WebElement btnReset;
 
+    @AndroidFindBy(id = "btnDetail")
+    WebElement btnDetail;
+
     public EmiCalculatorPage() {
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME)), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(AppiumUtil.LOAD_TIME)), this);
     }
 
     public EmiCalculatorPage fillAmount(int amount) {
-        amountEL.isDisplayed();
-        amountEL.sendKeys(String.valueOf(amount));
+        etLoanAmount.isDisplayed();
+        etLoanAmount.clear();
+        etLoanAmount.sendKeys(String.valueOf(amount));
         return this;
     }
 
     public EmiCalculatorPage fillInterest(int interest) {
-        interestEl.isDisplayed();
-        interestEl.sendKeys(String.valueOf(interest));
+        etInterest.isDisplayed();
+        etInterest.clear();
+        etInterest.sendKeys(String.valueOf(interest));
         return this;
     }
 
-    public EmiCalculatorPage fillYear(int year) {
-        yearEl.isDisplayed();
-        yearEl.sendKeys(String.valueOf(year));
+    public EmiCalculatorPage fillYears(int years) {
+        etYears.isDisplayed();
+        etYears.clear();
+        etYears.sendKeys(String.valueOf(years));
         return this;
     }
 
-    public EmiCalculatorPage fillMonth(int month) {
-        monthEl.isDisplayed();
-        monthEl.sendKeys(String.valueOf(month));
+    public EmiCalculatorPage fillMonths(int months) {
+        etMonths.isDisplayed();
+        etMonths.clear();
+        etMonths.sendKeys(String.valueOf(months));
         return this;
     }
 
-    public EmiCalculatorPage fillFee(int fee) {
-        feeEl.isDisplayed();
-        feeEl.sendKeys(String.valueOf(fee));
+    public EmiCalculatorPage fillFees(int fees) {
+        etFee.isDisplayed();
+        etFee.sendKeys(String.valueOf(fees));
         return this;
     }
 
-    public EmiCalculatorPage clickCalculateBtn() {
-        calculateBtn.isDisplayed();
-        calculateBtn.click();
+    public EmiCalculatorPage tapBtnCalculate() {
+        btnCalculate.isDisplayed();
+        btnCalculate.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
-    public EmiCalculatorPage resetCalculateBtn() {
+    public EmiCalculatorPage tapResetCalculateBtn() {
         btnReset.isDisplayed();
         btnReset.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
+
+    public EmiCalculatorPage tapDetailCalculateBtn() {
+        btnReset.isDisplayed();
+        btnReset.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 }
