@@ -21,7 +21,21 @@ First we have to make your system ready then we can start our journey with appiu
     Open the app in your device. and use the command - adb shell "dumpsys activity activities | grep mResumedActivity"
 13. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
       TestNG XML' & install
-      
+
+## Appium Version 2 commands
+1. Install Appium: npm i --location=global appium
+2. Uninstall Appium: npm uninstall -g appium
+3. check drivers list: appium driver list
+4. Install uiautomator2 & execute-driver driver: appium driver install uiautomator2, appium plugin install execute-driver
+5. check plugin list: appium plugin list
+6. Install Plugin: appium plugin install plugin_name
+7. Set default path: appium --base-path /wd/hub
+8. Run Appium: appium
+
+### Related Resources
+* [Appium NPM](https://www.npmjs.com/package/appium)
+* [Appium GitHub](https://github.com/appium/appium)
+
 ##  Create Java(Gradle) Project in IntelliJ IDEA for Appium
 1. Create Java(Gradle) Project in IntelliJ IDEA
 2. Add Gradle Dependencies   
