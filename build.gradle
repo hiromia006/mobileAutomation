@@ -10,12 +10,26 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
-    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.3'
-    testImplementation group: 'io.appium', name: 'java-client', version: '8.0.0'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.8.0'
+
+    // https://mvnrepository.com/artifact/io.appium/java-client
+    testImplementation 'io.appium:java-client:8.6.0'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+
     testImplementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
     // FileUtils.copyFile
     testImplementation 'commons-io:commons-io:2.11.0'
+
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+    testImplementation 'com.aventstack:extentreports:5.1.1'
+
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    //POI
+    testImplementation 'org.apache.poi:poi:5.2.2'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
 
 }
 
