@@ -80,6 +80,7 @@ First we have to make your system ready then we can start our journey with appiu
 * [Download Apk from Google Play](https://apps.evozi.com/apk-downloader/)
 
 ### Related Resources
+* [Appium Command](https://dpgraham.github.io/docs/en/commands/status/)
 * [Troubleshoot Activities Startup](https://appium.io/docs/en/writing-running-appium/android/activity-startup/)
 * [Appium API Documentation](https://appium.io/docs/en/about-appium/api/)
 * [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
