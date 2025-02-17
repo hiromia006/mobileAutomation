@@ -77,7 +77,7 @@ First we have to make your system ready then we can start our journey with appiu
 ### Download Genymotion Emulator & Download Apk from Google Play
 * [Download Genymotion Emulator](https://www.genymotion.com/download/)
 * [Downloads – Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)https://www.virtualbox.org/wiki/Downloads)
-* [Download Apk from Google Play](https://apps.evozi.com/apk-downloader/)
+* [Download Apk from Google Play](https://apkcombo.app/downloader/)
 
 ### Related Resources
 * [Appium Command](https://dpgraham.github.io/docs/en/commands/status/)
