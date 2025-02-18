@@ -17,7 +17,7 @@ First we have to make your system ready then we can start our journey with appiu
     - The "Developer options" menu will now appear in your Settings menu.    
     - Turn On the "USB Debugging" option from "Developer Options"
 11. Indentify appPackage & appActivityName
-    Open the app in your device. and use the command: adb shell "dumpsys activity activities | grep mResumedActivity"
+    Open the app in your device. and use the command: adb shell dumpsys window | grep -E 'mCurrentFocus'
 12. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
       TestNG XML' & install
 
@@ -60,12 +60,12 @@ First we have to make your system ready then we can start our journey with appiu
         - Path: /wd/hub
         - Allow Unauthorized Certificates
 3. **Set DesiredCapabilities**
-- capabilities.setCapability("udid", "192.168.56.101:5555");
-- capabilities.setCapability("platformVersion", "12");
-- capabilities.setCapability("appPackage", "com.bng.calculator");
-- capabilities.setCapability("appActivity", "com.bng.calc.MainActivity");
+- capabilities.setCapability("appium:udid", "192.168.56.101:5555");
+- capabilities.setCapability("appium:platformVersion", "12");
+- capabilities.setCapability("appium:appPackage", "com.bng.calculator");
+- capabilities.setCapability("appium:appActivity", "com.bng.calc.MainActivity");
 - capabilities.setCapability("platformName", "Android");
-- capabilities.setCapability("automationName", "UiAutomator2");
+- capabilities.setCapability("appium:automationName", "UiAutomator2");
 4. **Disable Permission Monitoring**
 - Go to developer option.
 - Go to last option called --> Disable Permission Monitoring --> enable it.
