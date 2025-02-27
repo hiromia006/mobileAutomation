@@ -40,7 +40,7 @@ First we have to make your system ready then we can start our journey with appiu
 1. Create Java(Gradle) Project in IntelliJ IDEA
 2. Add Gradle Dependencies   
     - [Selenium](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
-    - [Appium CLient](https://mvnrepository.com/artifact/io.appium/java-client)    
+    - [Appium Client](https://mvnrepository.com/artifact/io.appium/java-client)    
      - [TestNG](https://mvnrepository.com/artifact/org.testng/testng)
 3. [Desired Capabilities](https://appium.io/docs/en/writing-running-appium/caps/)
 
