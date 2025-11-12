@@ -9,24 +9,24 @@ First we have to make your system ready then we can start our journey with appiu
 5. [Download & Install Vysor](https://www.vysor.io/download/)
 6. Set environment variable(path):  Set JAVA_HOME & ANDROID_HOME
 7. Check if node.js, npm & Android SDK are installed: node --version, npm --version, adb --version
-8. Install appium : Appium Version 2 commands installation process
-9. Check if appium is installed: appium -v
+8. Install Appium: Appium Version 2 commands installation process
+9. Check if Appium is installed: appium -v
 10. Plugin Device (turn on developer mode & USB debugging)    
-    -  Find build number under settings and tap 7 times on build number.    
-    - Enter your pattern, PIN or password to enable the Developer options menu.    
+    -  Find the build number under settings and tap 7 times on the build number.    
+    - Enter your pattern, PIN, or password to enable the Developer options menu.    
     - The "Developer options" menu will now appear in your Settings menu.    
-    - Turn On the "USB Debugging" option from "Developer Options"
-11. Indentify appPackage & appActivityName
-    Open the app in your device. and use the command: adb shell dumpsys window | grep -E 'mCurrentFocus'
+    - Turn on the "USB Debugging" option from "Developer Options"
+11. Identify appPackage & appActivityName
+    Open the app on your device. and use the command: adb shell dumpsys window | grep -E 'mCurrentFocus' or  adb shell dumpsys window | Select-String "mCurrentFocus"
 12. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
       TestNG XML' & install
 
 ## Appium Version 2 commands
 1. Install Appium: npm i --location=global appium
 2. Uninstall Appium: npm uninstall -g appium
-3. check drivers list: appium driver list
+3. Check driver's list: Appium driver list
 4. Install uiautomator2 & execute-driver driver: appium driver install uiautomator2, appium plugin install execute-driver
-5. check plugin list: appium plugin list
+5. Check plugin list: appium plugin list
 6. Install Plugin: appium plugin install plugin_name
 7. Run with path: appium --base-path /wd/hub
 8. Run Appium: appium
