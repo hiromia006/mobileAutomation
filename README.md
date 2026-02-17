@@ -17,8 +17,12 @@ First we have to make your system ready then we can start our journey with appiu
     - The "Developer options" menu will now appear in your Settings menu.    
     - Turn on the "USB Debugging" option from "Developer Options"
 11. Identify appPackage & appActivityName
-    Open the app on your device. and use the command: adb shell dumpsys window | grep -E 'mCurrentFocus' or  adb shell dumpsys window | Select-String "mCurrentFocus"
-12. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
+    Open the app on your device. and use the command:
+    For Windows
+     adb shell dumpsys window | grep -E 'mCurrentFocus' or  adb shell dumpsys window | Select-String "mCurrentFocus"
+     Linus
+     adb shell dumpsys window | grep -E 'mCurrentFocus'
+13. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
       TestNG XML' & install
 
 ## Appium Version 2 commands
