@@ -1,6 +1,6 @@
-# Prepare Appium Instance for Window 
-To Start Automation with Appium, we have to follow couple of steps.
-First we have to make your system ready then we can start our journey with appium.
+# Prepare Appium Instance for Windows 
+To Start Automation with Appium, we have to follow a couple of steps.
+First, we have to prepare your system, then we can start our journey with Appium.
 
 1. [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 2. [Download & Install IntelliJ IDEA Community Version](https://www.jetbrains.com/idea/download/)
@@ -8,7 +8,7 @@ First we have to make your system ready then we can start our journey with appiu
 4. [Download & Install LTS Node Js](https://nodejs.org/en/download/)
 5. [Download & Install Vysor](https://www.vysor.io/download/)
 6. Set environment variable(path):  Set JAVA_HOME & ANDROID_HOME
-7. Check if node.js, npm & Android SDK are installed: node --version, npm --version, adb --version
+7. Check if Node.js, npm & Android SDK are installed: node --version, npm --version, adb --version
 8. Install Appium: Appium Version 2 commands installation process
 9. Check if Appium is installed: appium -v
 10. Plugin Device (turn on developer mode & USB debugging)    
@@ -18,8 +18,10 @@ First we have to make your system ready then we can start our journey with appiu
     - Turn on the "USB Debugging" option from "Developer Options"
 11. Identify appPackage & appActivityName
     Open the app on your device. and use the command:
+    
     For Windows
      adb shell dumpsys window | grep -E 'mCurrentFocus' or  adb shell dumpsys window | Select-String "mCurrentFocus"
+    
      Linus
      adb shell dumpsys window | grep -E 'mCurrentFocus'
 13. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
