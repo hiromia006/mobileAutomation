@@ -18,7 +18,7 @@ First, we have to prepare your system, then we can start our journey with Appium
     - Turn on the "USB Debugging" option from "Developer Options"
 11. Identify appPackage & appActivityName
     Open the app on your device. and use the commands    
-    For Windows command: adb shell dumpsys window | grep -E 'mCurrentFocus' or  adb shell dumpsys window | Select-String "mCurrentFocus"    
+    For Windows command: adb shell dumpsys window | Select-String "mCurrentFocus"    
     For Linus command: adb shell dumpsys window | grep -E 'mCurrentFocus'
     
 13. **Create TestNG XML** plugin install from Marketplace - File >> Settings >> plugin >> Marketplace >> search 'Create
